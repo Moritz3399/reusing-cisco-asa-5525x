@@ -76,3 +76,7 @@ My appliance came with an installed 8GB eUSB module.
 - eUSB uses USB2, but more lanes to reach higher speeds
 
 > I will try to install an OS to it later.
+
+## Installing Ubuntu Server
+
+I installed Ubuntu server on the machine. Please see check my notes [here](./ubuntu-server.md).
