@@ -53,7 +53,7 @@ To output the BIOS to serial, the console output needs to be redirected to to CO
 
 ![](./img/cisco-asa-5525x-bios-serial-redirect-1.png)
 
-I set the bits per second to 115200 for a faster fresh.
+I set the bits per second to 115200 for a faster refresh and to match the settings in my Ubuntu server installation.
 
 ![](./img/cisco-asa-5525x-bios-serial-redirect-2.png)
 
