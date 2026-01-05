@@ -11,8 +11,34 @@ This is a documentation of my setup process.
 
 The Cisco ASA 5525-x is a firewall appliance. Its [end of life](https://www.cisco.com/c/en/us/products/collateral/security/asa-firepower-services/asa5525-5545-5555-1yr-series-subs-eol.html) was in 2025.
 
-It uses standard hardware:
-> TBD: Add list of hardware specs
+It uses mostly standard hardware.
+
+```bash
+user@cisco-asa
+OS: Ubuntu 24.04 noble
+Kernel: x86_64 Linux 6.8.0-90-generic
+Uptime: 28m
+Packages: 770
+Shell: bash 5.2.21
+Disk: 7.5G / 56G (15%)
+CPU: Intel Xeon X3430 @ 4x 2.395GHz
+GPU: ASPEED Technology, Inc. ASPEED Graphics Family 
+RAM: 477MiB / 7931MiB # ECC DDR3
+```
+
+### External IO
+- 8x 1Gbit/s ethernet
+- 1x management port
+- 1x console port
+- 2x usb A (2.0?)
+- 2.5" drive bay with cage
+
+### Internal IO
+- PCIe x8 slot (Cisco seems to sell specific modules, but a riser with 90° adapter is installed as empty module. No opening in the back.)
+- 2x SATA ports
+    - first used for 2.5" drive bay
+    - second is open and there is power connector (don't know the specifics)
+- eUSB slot (populated with 8GB module in my case)
 
 ## Additional readings
 
