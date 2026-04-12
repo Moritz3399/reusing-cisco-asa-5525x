@@ -106,3 +106,27 @@ My appliance came with an installed 8GB eUSB module.
 ## Installing Ubuntu Server
 
 I installed Ubuntu server on the machine. Please see check my notes [here](./ubuntu-server.md).
+
+## Management port
+
+The management port does not work without Cisco software/firmware. It seems to require a license and in this case is only working when using the Cisco ASA soft-/firmware.
+
+There is a bcm configuration option in the bios.
+- static ip: unable to change values
+- dynamic ip: no ip is assigned
+
+In Ubuntu values can be configure with `ipmitools`, but changes have no effect.
+
+Changing configuration via ROMMON was not successful either.
+
+> Opinion of AI on this: it does not work without Cisco software and license. Firmware is locked down.
+
+> After hours of tinkering, I do share this opinion. 
+
+## Power Consumption
+
+On `Ubuntu 24.04.3 LTS` server with no changes to the standard installation the idle power draw is about 46W. Running a stress test (`stress-ng -c 20 --timeout 120`) the power consumption was 100.9W.
+
+> On Ubuntu the PWM control does not work and fans are running at the same level (probably max settings).
+
+![](./img/Cisco-Asa-5525x-power.png)
